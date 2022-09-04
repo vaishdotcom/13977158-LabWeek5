@@ -8,11 +8,14 @@ public class LoadAssets : MonoBehaviour {
     [SerializeField]
     private GameObject blueObj;
 
-	// Use this for initialization
-	void Start () {
-        Instantiate(redObj, new Vector3(2, 0, 0), Quaternion.identity);
-        Instantiate(blueObj, new Vector3(-2, 0, 0), Quaternion.identity);
+    // Use this for initialization
 
+    private void Awake () {
+        Instantiate(redObj, new Vector3(2, 1, 0), Quaternion.identity);
+        Instantiate(blueObj, new Vector3(-2, -1, 0), Quaternion.identity);
+    }
+    void Start () {
+       
     }
 	
 	// Update is called once per frame
