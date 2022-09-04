@@ -23,6 +23,10 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("w"))
+        {
+           transArray[0].transform.Rotate(0.0f, 0.0f, 45.0f, Space.Self);
+           transArray[1].transform.Rotate(0.0f, 0.0f, -45.0f, Space.Self);
+        }
     }
 }
